@@ -180,17 +180,17 @@ app.post('/checkout-no-registr', async (req, res) => {
         const {passwordHash, ...userData} = user._doc
         if (req.body.check) {
             res.cookie('token', token, {
-                httpOnly: false,
+                // httpOnly: false,
                 maxAge: maxAges,
-                sameSite: 'strict',
-                secure: true,
+                // sameSite: 'strict',
+                // secure: true,
                 path: '/'
             })
         } else {
             res.cookie('token', token, {
-                httpOnly: false,
-                sameSite: 'strict',
-                secure: true,
+                // httpOnly: false,
+                // sameSite: 'strict',
+                // secure: true,
                 path: '/'
             })
         }

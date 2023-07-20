@@ -46,17 +46,17 @@ export const registration = async (req, res) => {
         const {passwordHash, matrixSearchHistory, ...userData} = user._doc
         if (req.body.check) {
             res.cookie('token', token, {
-                httpOnly: false,
+                // httpOnly: false,
                 maxAge: maxAge,
-                sameSite: 'strict',
-                secure: true,
+                // sameSite: 'strict',
+                // secure: true,
                 path: '/'
             })
         } else {
             res.cookie('token', token, {
-                httpOnly: false,
-                sameSite: 'strict',
-                secure: true,
+                // httpOnly: false,
+                // sameSite: 'strict',
+                // secure: true,
                 path: '/'
             })
         }
@@ -92,15 +92,15 @@ export const login = async (req, res) => {
         if (req.body.check) {
             res.cookie('token', token, {
                 maxAge: maxAge,
-                httpOnly: false,
-                sameSite: 'strict',
+                // httpOnly: false,
+                // sameSite: 'strict',
                 // secure: true,
                 path: '/'
             })
         } else {
             res.cookie('token', token, {
-                httpOnly: false,
-                sameSite: 'strict',
+                // httpOnly: false,
+                // sameSite: 'strict',
                 // secure: true,
                 path: '/'
             })
