@@ -100,7 +100,7 @@ app.post('/checkout', async (req, res) => {
             metadata: {
                 product_name: req.body.items.item.name,
                 product_price: req.body.items.item.price,
-                gender: req.body.items?.item?.gender,
+                gender: req.body.items.item?.gender,
                 username: req.body.items.item?.username,
                 dateuser: req.body.items.item?.date,
                 matrix: req.body.items.item?.matrix,
@@ -110,7 +110,6 @@ app.post('/checkout', async (req, res) => {
             mode: 'payment',
             submit_type: 'pay',
             line_items: [
-
                 {
                     quantity: 1,
                     price_data: {
@@ -201,7 +200,7 @@ app.post('/checkout-no-registr', async (req, res) => {
                 product_name: req.body.item.name,
                 product_price: req.body.item.price,
                 dateuser: req.body.item?.date,
-                gender: req.body?.item?.gender,
+                gender: req.body.item?.gender,
                 username: req.body.item?.username,
                 matrix: req.body.item?.matrix,
                 date1: req.body.item?.date1,
